@@ -128,7 +128,5 @@ public interface ContactDao {
 }
 ```
 
-
-
 ### LiveData
-
+LiveData follows the Observer pattern. It is an observerable data wrapper and it notifies it's observers when the data has changed. LiveData is lifecycle aware. It only cosniders an observer to be in an active state if its lifecycle is STARTED OR RESUMED. Inactive observers registed to watch LiveData objects aren't notified about changes. An instance of this object is generally created within your ViewModel class.
