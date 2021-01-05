@@ -82,4 +82,53 @@ public class Contact {
 ```
 
 ### Data Access Objects (DAO)
+The Data Access Objects is the API for the SQLiteDatabase. It is an interface that declares the CRUD methods for your database. 
+
+#### @Dao
+You use the @Dao annotation to let the compiler know that this interface will be a Data Access Object Interface.
+
+```
+@Dao
+public interface ContactDao { }
+```
+
+#### @Insert(onConflict)
+The @Insert(onConflict) annotation lets the compiler know that the method is as INSERT. There are a variety of OnConflictStrategies that you can use to handle conflicts.
+
+```
+@Insert (onConflict = OnConflictStrategy.IGNORE)
+void insert(Contact contact);
+````
+
+#### @Query(SQL)
+The @Query annotations lets the know that the method is a query, and more specifically, what kind of query the method is performing. You use SQL to declare your intentions for each of the query methods. 
+```
+@Query("DELETE FROM contact_table")
+void deleteAll();
+
+@Query("SELECT * FROM contact_table ORDER BY name ASC")
+LiveData<List<Contact>> getAllContacts();
+```
+
+#### This is an example of a DAO interface:
+```
+@Dao
+public interface ContactDao {
+
+    //CRUD Operations
+    @Insert (onConflict = OnConflictStrategy.IGNORE)
+    void insert(Contact contact);
+
+    @Query("DELETE FROM contact_table")
+    void deleteAll();
+
+    @Query("SELECT * FROM contact_table ORDER BY name ASC")
+    LiveData<List<Contact>> getAllContacts();
+
+}
+```
+
+
+
+### LiveData
 
