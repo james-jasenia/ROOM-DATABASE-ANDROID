@@ -7,7 +7,11 @@ The purpose of this app is to explore the Room Library and how it provides a lay
 
 ##### Room Documentation: https://developer.android.com/training/data-storage/room?gclid=Cj0KCQiAlsv_BRDtARIsAHMGVSapV4bg9VhEDDfKxyhK2fuLiPLOf8n7JzNkSMuzUBRrEcU-T2The1gaAsceEALw_wcB&gclsrc=aw.ds
 
+
+## Room Architecture:
 ![find](/RoomModel.png)
+
+##### Source: https://developer.android.com/codelabs/android-room-with-a-view#1
 
 ## Setup:
 Check the documentation for the dependencies you need to add to your app's build.gradle file. You may need to revisit the version number every now and then.
