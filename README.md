@@ -21,7 +21,7 @@ Check the documentation for the dependencies you need to add to your app's build
 
 ### Data Entities
 #### @Entity
-Use this annotation in your model to let the compiler know that you want the model to be an entity.
+Use this annotation in your model to let the compiler know that you want the model to be an entity. An entity is an annotated class that describes a database table when working with Room. It is similar to the Entities in CoreData when working with the Apple SDKs, however, the primary difference being the annotations within the Model.
 
 ```
 @Entity(tableName = "contact_table")
@@ -89,7 +89,7 @@ public class Contact {
 ```
 
 ### Data Access Objects (DAO)
-The Data Access Objects is the API for the SQLiteDatabase. It is an interface that declares the CRUD methods for your database. 
+The Data Access Objects is the API for the SQLiteDatabase. It is an interface that declares the CRUD methods for your database. The primary responsibility of the DAO is to map the SQL queries to functions that can be called.
 
 #### @Dao
 You use the @Dao annotation to let the compiler know that this interface will be a Data Access Object Interface.
