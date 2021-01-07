@@ -233,3 +233,8 @@ public class ContactViewModel extends AndroidViewModel {
     public void insert(Contact contact) { contactRepository.insert(contact); }
 }
 ```
+
+## Additional Considerations:
+
+#### Database Inspector
+Android Studio has a database inspector in the debug console. You can write your own SQL queries into the console. Amazing!
