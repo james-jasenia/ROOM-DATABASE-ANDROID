@@ -24,15 +24,25 @@ public class Contact {
         this.occupation = occupation;
     }
 
-    public int getId() {
-        return id;
-    }
-
+    public int getId() { return id; }
     public String getName() {
         return name;
     }
-
     public String getOccupation() {
         return occupation;
+    }
+
+    //I don't think these need to be here. The documentation mentions nothing about having setters. If I don't place them here, the code won't compile and is throwing the error:
+    //error: Cannot find setter for field. private String name;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
     }
 }

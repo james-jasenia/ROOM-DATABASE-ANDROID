@@ -19,11 +19,13 @@ public interface ContactDao {
     //CRUD Operations
     @Insert (onConflict = OnConflictStrategy.IGNORE)
     void insert(Contact contact);
+    
 
     @Query("DELETE FROM contact_table")
     void deleteAll();
 
     @Query("SELECT * FROM contact_table ORDER BY name ASC")
+    //Wraps the list of contacts in a Live Data object that can be observerable
     LiveData<List<Contact>> getAllContacts();
 
 }
